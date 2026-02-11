@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+        <title>Animated Scene</title>
+    </head>
+    <body>
+        <a-scene>
+            <!-- Set the sky -->
+            <a-sky color="black"></a-sky>
+            
+            <!-- Box that moves -->
+            <a-box position="0 1 -5" color="red"
+                   animation="
+                   property: position; 
+                   from: 0 1 -5; 
+                   to: 0 3 -5; 
+                   dur: 3000; 
+                   loop: true">
+            </a-box>
+            
+            <!-- Sphere that changes color -->
+            <a-sphere position="2 1 -5" radius="1" color="blue"
+                      animation="
+                      property: color; 
+                      from: blue; 
+                      to: yellow; 
+                      dur: 2000; 
+                      loop: true">
+            </a-sphere>
+            
+            <!-- Cylinder that rotates -->
+            <a-cylinder position="-2 1 -5" radius="0.5" height="2" color="green"
+                        animation="
+                        property: rotation; 
+                        to: 0 360 0; 
+                        dur: 4000; 
+                        loop: true">
+            </a-cylinder>
+            
+            <!-- Plane that moves and rotates -->
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="purple"
+                     animation="
+                     property: position; 
+                     from: 0 0 -4; 
+                     to: 0 2 -4; 
+                     dur: 5000; 
+                     loop: true">
+            </a-plane>
+           
+        </a-scene>
+    </body>
+</html>
